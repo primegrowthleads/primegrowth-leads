@@ -9,66 +9,81 @@
 <style>
 
 *{
+    margin:0;
+    padding:0;
     box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 body{
-    margin:0;
     font-family:Arial, Helvetica, sans-serif;
     background:#071B35;
     color:white;
 }
 
-.nav{
+header{
+    background:#04101F;
+    padding:18px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 8%;
-    background:#04101F;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-.nav img{
+.logo img{
     width:170px;
 }
 
-.hero{
-    text-align:center;
-    padding:90px 20px;
-    max-width:1000px;
-    margin:auto;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:16px;
 }
+
+nav a:hover{
+    color:#00E676;
+}
+
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 8%;
+}
+
 
 .hero img{
-    width:260px;
-    max-width:80%;
+    width:220px;
+    margin-bottom:25px;
 }
 
-h1{
+
+.hero h1{
     font-size:48px;
     line-height:1.2;
-    margin:25px 0;
-}
-
-h2{
-    color:#00E676;
-    font-size:34px;
     margin-bottom:20px;
 }
 
-h3{
-    color:#00E676;
+
+.hero p{
+    max-width:850px;
+    margin:auto;
+    color:#d5e2f0;
+    font-size:20px;
+    line-height:1.6;
 }
 
-p{
-    color:#d8e4f2;
-    font-size:18px;
-    line-height:1.7;
-}
 
 .btn{
     display:inline-block;
-    margin-top:30px;
-    padding:16px 40px;
+    margin-top:35px;
+    padding:16px 35px;
     background:#00E676;
     color:#071B35;
     text-decoration:none;
@@ -76,65 +91,57 @@ p{
     font-weight:bold;
 }
 
-.section{
+
+section{
     padding:70px 8%;
     text-align:center;
 }
+
+
+.title{
+    font-size:36px;
+    color:#00E676;
+    margin-bottom:25px;
+}
+
+
+.text{
+    font-size:18px;
+    color:#d5e2f0;
+    max-width:900px;
+    margin:auto;
+    line-height:1.7;
+}
+
 
 .cards{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
     gap:25px;
+    margin-top:40px;
 }
+
 
 .card{
-    background:#102A4C;
     width:280px;
+    background:#102A4C;
     padding:30px;
     border-radius:18px;
-    transition:.3s;
 }
 
-.card:hover{
-    transform:translateY(-5px);
+
+.card h3{
+    color:#00E676;
+    margin-bottom:15px;
 }
 
-.process{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
+
+.card p{
+    color:#d5e2f0;
+    line-height:1.5;
 }
 
-.step{
-    background:#102A4C;
-    padding:25px;
-    width:220px;
-    border-radius:15px;
-}
-
-.founder{
-    background:#102A4C;
-    max-width:550px;
-    margin:auto;
-    padding:35px;
-    border-radius:20px;
-}
-
-.footer{
-    background:#04101F;
-    padding:35px;
-    text-align:center;
-}
-
-@media(max-width:700px){
-
-h1{
-    font-size:34px;
-}
-
-}
 
 </style>
 
@@ -143,46 +150,72 @@ h1{
 <body>
 
 
-<div class="nav">
-<img src="logo.png" alt="PrimeGrowth Leads Logo">
+<header>
+
+<div class="logo">
+<img src="logo.png" alt="PrimeGrowth Leads">
 </div>
 
 
-<section class="hero">
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#industries">Industries</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+
+<section class="hero" id="home">
+
+<div>
 
 <img src="logo.png" alt="PrimeGrowth Leads">
 
 <h1>
-Helping Businesses Generate Qualified Leads & Build Strong Sales Pipelines
+Build Your B2B Sales Pipeline With Targeted Lead Generation
 </h1>
 
+
 <p>
-PrimeGrowth Leads helps startups, agencies, SaaS companies and growing businesses connect with the right decision makers through research-driven B2B lead generation, LinkedIn outreach and sales campaigns.
+PrimeGrowth Leads helps startups, agencies, SaaS companies and growing businesses connect with the right decision makers through research-driven prospecting, LinkedIn outreach and sales campaigns.
 </p>
+
 
 <a class="btn" href="mailto:ramlalkeelka936@gmail.com">
-Get Your Free Lead Generation Test
+Get Free Test Work
 </a>
+
+
+</div>
 
 </section>
 
 
 
-<section class="section">
+<section id="about">
 
-<h2>Why PrimeGrowth Leads?</h2>
+<h2 class="title">
+About PrimeGrowth Leads
+</h2>
 
-<p>
-We focus on understanding your target market, identifying the right prospects and creating professional outreach campaigns that generate meaningful business conversations.
+
+<p class="text">
+We help businesses discover the right prospects, create professional outreach strategies and generate better sales opportunities through focused B2B lead generation solutions.
 </p>
 
 </section>
 
 
 
-<section class="section">
+<section id="services">
 
-<h2>Our Services</h2>
+<h2 class="title">
+Our Services
+</h2>
 
 
 <div class="cards">
@@ -191,7 +224,7 @@ We focus on understanding your target market, identifying the right prospects an
 <div class="card">
 <h3>B2B Lead Generation</h3>
 <p>
-Find companies and decision makers that match your ideal customer profile.
+Find targeted companies and decision makers matching your ideal customer profile.
 </p>
 </div>
 
@@ -199,7 +232,7 @@ Find companies and decision makers that match your ideal customer profile.
 <div class="card">
 <h3>LinkedIn Outreach</h3>
 <p>
-Create professional connections with potential customers through personalized campaigns.
+Create meaningful professional conversations with potential customers.
 </p>
 </div>
 
@@ -207,15 +240,14 @@ Create professional connections with potential customers through personalized ca
 <div class="card">
 <h3>Cold Email Campaigns</h3>
 <p>
-Research-based email outreach designed to start valuable conversations.
+Research-based campaigns designed to start quality business discussions.
 </p>
 </div>
-
 
 <div class="card">
 <h3>Appointment Setting</h3>
 <p>
-Help your sales team focus on qualified opportunities and meetings.
+Help your sales team focus on qualified meetings and business opportunities.
 </p>
 </div>
 
@@ -223,7 +255,55 @@ Help your sales team focus on qualified opportunities and meetings.
 <div class="card">
 <h3>Sales Prospecting</h3>
 <p>
-Discover new opportunities and build a predictable sales pipeline.
+Discover new opportunities and build a stronger sales pipeline.
+</p>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section id="industries">
+
+<h2 class="title">
+Industries We Support
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+<h3>SaaS Companies</h3>
+<p>
+Helping software companies connect with potential customers.
+</p>
+</div>
+
+
+<div class="card">
+<h3>Marketing Agencies</h3>
+<p>
+Supporting agencies with targeted prospect research and outreach.
+</p>
+</div>
+
+
+<div class="card">
+<h3>Technology Companies</h3>
+<p>
+Building new business opportunities through smart prospecting.
+</p>
+</div>
+
+
+<div class="card">
+<h3>Growing Businesses</h3>
+<p>
+Helping companies create consistent sales opportunities.
 </p>
 </div>
 
@@ -235,35 +315,45 @@ Discover new opportunities and build a predictable sales pipeline.
 
 
 
-<section class="section">
+<section>
 
-<h2>How We Work</h2>
+<h2 class="title">
+How We Work
+</h2>
 
 
-<div class="process">
+<div class="cards">
 
 
-<div class="step">
-<h3>1. Research</h3>
-<p>Understand your market and ideal customers.</p>
+<div class="card">
+<h3>01. Research</h3>
+<p>
+Understand your market and ideal customer profile.
+</p>
 </div>
 
 
-<div class="step">
-<h3>2. Target</h3>
-<p>Find relevant companies and decision makers.</p>
+<div class="card">
+<h3>02. Target</h3>
+<p>
+Identify the right companies and decision makers.
+</p>
 </div>
 
 
-<div class="step">
-<h3>3. Outreach</h3>
-<p>Create professional conversations.</p>
+<div class="card">
+<h3>03. Outreach</h3>
+<p>
+Create personalized business conversations.
+</p>
 </div>
 
 
-<div class="step">
-<h3>4. Growth</h3>
-<p>Build opportunities for your sales pipeline.</p>
+<div class="card">
+<h3>04. Growth</h3>
+<p>
+Generate opportunities for your sales pipeline.
+</p>
 </div>
 
 
@@ -274,18 +364,25 @@ Discover new opportunities and build a predictable sales pipeline.
 
 
 
-<section class="section">
+<section>
 
-<h2>Founder</h2>
+<h2 class="title">
+Founder
+</h2>
 
-<div class="founder">
 
-<h3>RAM KEELKA</h3>
+<div class="card" style="margin:auto;max-width:550px;">
+
+<h3>
+RAM KEELKA
+</h3>
 
 <p>
 Founder & CEO<br>
 PrimeGrowth Leads
 </p>
+
+<br>
 
 <p>
 Building a focused B2B lead generation agency helping businesses find better sales opportunities through smart prospecting and outreach.
@@ -298,10 +395,38 @@ Building a focused B2B lead generation agency helping businesses find better sal
 
 
 
-<div class="footer">
+<section id="contact">
+
+<h2 class="title">
+Contact PrimeGrowth Leads
+</h2>
+
+
+<p class="text">
+Ready to generate more sales opportunities? Let's discuss how we can support your growth.
+</p>
+
+
+<br>
+
+
+<a class="btn" href="mailto:ramlalkeelka936@gmail.com">
+Contact Us
+</a>
+
+
+</section>
+
+
+
+
+<footer style="background:#04101F;padding:40px;text-align:center;">
 
 <p>
-PrimeGrowth Leads<br>
+PrimeGrowth Leads
+</p>
+
+<p>
 B2B Lead Generation & Sales Agency
 </p>
 
@@ -309,7 +434,8 @@ B2B Lead Generation & Sales Agency
 Email: ramlalkeelka936@gmail.com
 </p>
 
-</div>
+
+</footer>
 
 
 
